@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Layout Página CSS</title>
+
+<style type="text/css">
+.cabecera, .footer {
+	background-color: gray;
+	color: white;
+	padding: 15px;
+}
+
+.cuerpoIzquierda {
+	float: left;
+	width: 20%;
+}
+
+.cuerpoDerecha {
+	float: left;
+	width: 80%;
+}
+
+.footer {
+	float: left;
+	width: 100%;
+}
+</style>
+</head>
+<body>
+
+	<div id="pagina">
+
+		<header>
+			<div class="cabecera">TITULO</div>
+		</header>
+
+		<section id="main">
+
+			<div class="cuerpo">
+
+				<div class="cuerpoIzquierda">
+					<ul>
+						<li><a onclick="mostrarInicio()" href="#">INICIO</a></li>
+						<li><a onclick="mostrarReservas()" href="#">RESERVA</a></li>
+						<li><a onclick="mostrarAyuda()" href="#">AYUDA</a></li>
+						<li><a onclick="mostrarContacto()" href="#">CONTACTO</a></li>
+					</ul>
+				</div>
+
+				<div class="cuerpoDerecha">
+					<h1 id="cabecera">CABECERA</h1>
+					<p id="parrafo1">Contenido de la parte de cabecera</p>
+					<p id="parrafo2">Lorem ipsum dolor sit amet, consectetur
+						adipiscing elit. Phasellus bibendum non sem sit amet ullamcorper.
+						Nullam pulvinar tortor nisl, non facilisis enim hendrerit ut. Orci
+						varius natoque penatibus et magnis dis parturient montes, nascetur
+						ridiculus mus. Donec efficitur consequat bibendum. Integer velit
+						ex, cursus a sem eget, egestas viverra tortor. Donec faucibus,
+						elit vitae semper pulvinar, neque dolor vehicula elit, eget luctus
+						nunc arcu eu libero. Praesent lacus nibh, tempor sed venenatis ac,
+						dictum ultricies massa. Ut ultrices nisi metus. Aliquam lacinia
+						lorem vel quam sodales, at fermentum lorem tempus. Sed sem mi,
+						auctor sed augue ac, fringilla viverra augue. Etiam ac metus odio.</p>
+				</div>
+
+			</div>
+
+
+
+		</section>
+
+		<footer>
+			<div class="footer">
+				<p>Todos los derechos reservados.</p>
+			</div>
+		</footer>
+
+	</div>
+
+	<script type="text/javascript">
+		//comentario de javascript
+		function mostrarInicio() {
+			//en javascript disponemos de un conjunto de recursos, como por ejemplo
+			//document, que hace referencia a la web actual
+			document.getElementById("cabecera").innerHTML = "INICIO";
+			document.getElementById("parrafo1").innerHTML = "texto  parrafo1";
+			document.getElementById("parrafo2").innerHTML = "texto inicio parrafo2";
+		}
+
+		function mostrarReservas() {
+			document.getElementById("cabecera").innerHTML = "RESERVAS";
+			document.getElementById("parrafo1").innerHTML = "texto reservas parrafo1";
+			document.getElementById("parrafo2").innerHTML = "texto reservas parrafo2";
+		}
+
+		function mostrarAyuda() {
+			document.getElementById("cabecera").innerHTML = "AYUDA";
+			document.getElementById("parrafo1").innerHTML = "texto ayuda parrafo1";
+			document.getElementById("parrafo2").innerHTML = "texto ayuda parrafo2";
+		}
+
+		function mostrarContacto() {
+			document.getElementById("cabecera").innerHTML = "CONTACTO";
+			document.getElementById("parrafo1").innerHTML = "texto contacto parrafo1";
+			document.getElementById("parrafo2").innerHTML = "texto contacto parrafo2";
+		}
+	</script>
+
+</body>
+</html>

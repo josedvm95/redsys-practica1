@@ -2,110 +2,78 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 <title>Práctica 1</title>
-
-<style type="text/css">
-.cabecera, .footer {
-	background-color: gray;
-	color: white;
-	padding: 15px;
-}
-
-.cuerpoIzquierda {
-	float: left;
-	width: 20%;
-}
-
-.cuerpoDerecha {
-	float: left;
-	width: 80%;
-}
-
-.footer {
-	float: left;
-	width: 100%;
-}
-</style>
+<link rel="stylesheet" href="css/myGrid.css" />
 </head>
 <body>
 
+	<!-- Página -->
 	<div id="pagina">
 
-		<header>
-			<div class="cabecera">TITULO</div>
-		</header>
+		<!-- Menú -->
+		<nav id="nav">
+			<ul class="iconos">
+				<li><a href="#caracteristicas">Características</a></li>
+				<li><a href="#precio">Precio</a></li>
+				<li><a href="#comunidad">Comunidad</a></li>
+				<li><a href="#recursos">Recursos</a></li>
+			</ul>
+		</nav>
 
+		<!-- Principal -->
 		<section id="main">
-
-			<div class="cuerpo">
-
-				<div class="cuerpoIzquierda">
-					<ul>
-						<li><a onclick="mostrarInicio()" href="#">INICIO</a></li>
-						<li><a onclick="mostrarReservas()" href="#">RESERVA</a></li>
-						<li><a onclick="mostrarAyuda()" href="#">AYUDA</a></li>
-						<li><a onclick="mostrarContacto()" href="#">CONTACTO</a></li>
-					</ul>
+			<header>
+				<div class="cabecera">
+					<span class="logo"><img src="imagenes/logo.png" alt="" /></span>
+					<h1>Título</h1>
+					<h2>Subtítulo</h2>
 				</div>
+			</header>
 
-				<div class="cuerpoDerecha">
-					<h1 id="cabecera">CABECERA</h1>
-					<p id="parrafo1">Contenido de la parte de cabecera</p>
-					<p id="parrafo2">Lorem ipsum dolor sit amet, consectetur
-						adipiscing elit. Phasellus bibendum non sem sit amet ullamcorper.
-						Nullam pulvinar tortor nisl, non facilisis enim hendrerit ut. Orci
-						varius natoque penatibus et magnis dis parturient montes, nascetur
-						ridiculus mus. Donec efficitur consequat bibendum. Integer velit
-						ex, cursus a sem eget, egestas viverra tortor. Donec faucibus,
-						elit vitae semper pulvinar, neque dolor vehicula elit, eget luctus
-						nunc arcu eu libero. Praesent lacus nibh, tempor sed venenatis ac,
-						dictum ultricies massa. Ut ultrices nisi metus. Aliquam lacinia
-						lorem vel quam sodales, at fermentum lorem tempus. Sed sem mi,
-						auctor sed augue ac, fringilla viverra augue. Etiam ac metus odio.</p>
+			<!-- Formulario crear cuenta -->
+			<div class="fila" id="signup-form">
+				<hr />
+				<div class="col-6">
+					<h2>Crear cuenta ahora.</h2>
 				</div>
-
+				<div class="col-6">
+					<form novalidate name="myForm" method="post" action="#"
+						id="formulario">
+						<div class="campos" id="crearCuenta">
+							<div class="campo">
+								<input type="email" name="email" id="email"
+									placeholder="Tu email" /> <span class="error"
+									aria-live="polite"></span>
+							</div>
+							<div class="campo">
+								<input type="text" name="name" id="name"
+									placeholder="Nombre de usuario" />
+							</div>
+							<div class="campo">
+								<input type="password" name="pw" id="pass"
+									pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+									title="La contraseña ha de contener al menos un número, una letra minúscula, una mayúscula y tener 8 o más caracteres.">
+							</div>
+						</div>
+						<ul class="acciones especial">
+							<li><input type="submit" class="button" value="Send"></li>
+						</ul>
+					</form>
+				</div>
 			</div>
-
-
-
 		</section>
 
-		<footer>
-			<div class="footer">
-				<p>Todos los derechos reservados.</p>
-			</div>
+		<footer id="pie">
+			<ul class="copyright">
+				<li>&copy; 2019 José A. del Val</li>
+			</ul>
 		</footer>
 
 	</div>
-
-	<script type="text/javascript">
-		//comentario de javascript
-		function mostrarInicio() {
-			//en javascript disponemos de un conjunto de recursos, como por ejemplo
-			//document, que hace referencia a la web actual
-			document.getElementById("cabecera").innerHTML = "INICIO";
-			document.getElementById("parrafo1").innerHTML = "texto  parrafo1";
-			document.getElementById("parrafo2").innerHTML = "texto inicio parrafo2";
-		}
-
-		function mostrarReservas() {
-			document.getElementById("cabecera").innerHTML = "RESERVAS";
-			document.getElementById("parrafo1").innerHTML = "texto reservas parrafo1";
-			document.getElementById("parrafo2").innerHTML = "texto reservas parrafo2";
-		}
-
-		function mostrarAyuda() {
-			document.getElementById("cabecera").innerHTML = "AYUDA";
-			document.getElementById("parrafo1").innerHTML = "texto ayuda parrafo1";
-			document.getElementById("parrafo2").innerHTML = "texto ayuda parrafo2";
-		}
-
-		function mostrarContacto() {
-			document.getElementById("cabecera").innerHTML = "CONTACTO";
-			document.getElementById("parrafo1").innerHTML = "texto contacto parrafo1";
-			document.getElementById("parrafo2").innerHTML = "texto contacto parrafo2";
-		}
-	</script>
+	
+	<!-- Scripts -->
+  <script src="js/jquery.min.js"></script>
 
 </body>
 </html>

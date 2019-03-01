@@ -33,11 +33,11 @@
 
 			<!-- Formulario crear cuenta -->
 			<div class="fila" id="signup-form">
-				<hr />
-				<div class="col-6">
-					<h2>Crear cuenta ahora.</h2>
+				<hr class="col-12"/>
+				<div class="col-6 desktop-only">
+					<h2>Empieza a usar la nube.</h2>
 				</div>
-				<div class="col-6">
+				<div class="col-6 col-12-small">
 					<form novalidate name="myForm" method="post" action="#"
 						id="formulario">
 						<div class="campos" id="crearCuenta">
@@ -48,11 +48,12 @@
 							</div>
 							<div class="campo">
 								<input type="text" name="name" id="name"
-									placeholder="Nombre de usuario" />
+									placeholder="Elige un usuario" />
 							</div>
 							<div class="campo">
 								<input type="password" name="pw" id="pass"
 									pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+									placeholder="Elige una contraseña"
 									title="La contraseña ha de contener al menos un número, una letra minúscula, una mayúscula y tener 8 o más caracteres.">
 							</div>
 						</div>

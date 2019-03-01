@@ -2,4 +2,4 @@ https://www.digitalocean.com
 https://www.linode.com
 https://www.vultr.com
 https://aws.amazon.com/es/lightsail/
-https://www.bytemark.co.uk/cloud-hosting/pricing/
+https://www.bytemark.co.uk/

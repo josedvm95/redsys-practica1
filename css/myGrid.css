@@ -1,3 +1,44 @@
+/*José A. del Val*/
+* {
+  box-sizing: border-box;
+}
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p,
+a, strong, ul, li, form, article, footer, header,
+menu, nav, section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;}
+
+article, footer, header, menu, nav, section {
+	display: block;}
+
+body {
+	line-height: 1;
+}
+
+ul {
+	list-style: none;
+}
+
+body {
+	-webkit-text-size-adjust: none;
+}
+
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+input, textarea {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+}
 
 /* Fila */
 
@@ -69,7 +110,7 @@
 				padding: 1.25em 0 0 1.25em;
 			}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 899px) {
 
 			.fila {
 				display: flex;
@@ -140,3 +181,229 @@
 					}
 
 		}
+
+/* Estilos base */
+body {
+  overflow-y: scroll;
+}
+
+body, input, textarea {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  color: #777777;
+  font-size: 20pt;
+  line-height: 1.75em;
+}
+
+strong, b, h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  color: #363636;
+}
+
+h1 {
+  font-size: 2.4em;
+}
+
+h2 {
+  font-size: 1.8em;
+}
+
+h3, h4, h5, h6 {
+  font-size: 1.25em;
+}
+
+hr {
+  border: 0;
+  border-top: solid 1px #ddd;
+  padding: 1.5em 0 0 0;
+  margin: 1.75em 0 0 0;
+}
+
+/*Adaptar a distintas pantallas*/
+
+  * > .phone-only, .tablet-portrait-up, .tablet-portrait-only,
+  .tablet-landscape-up, .tablet-landscape-only, .desktop-up, .desktop-only,
+  .big-desktop-up {
+    display: none;
+  }
+
+  .phone-up {
+    /*Do nothing, for now*/
+  }
+
+  @media (max-width: 599px) {
+    .phone-only {
+      display: block;
+    }
+
+    body, input, textarea {
+      font-size: 12pt;
+    }
+  }
+
+  @media (min-width: 600px) {
+    .tablet-portrait-up {
+      display: block;
+    }
+
+    body, input, textarea {
+      font-size: 14pt;
+    }
+  }
+
+  @media (min-width: 600px) and (max-width: 899px) {
+    .tablet-portrait-only {
+      display: block;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .tablet-landscape-up {
+      display: block;
+    }
+
+    body, input, textarea {
+      font-size: 14pt;
+    }
+  }
+
+  @media (min-width: 900px) and (max-width: 1199px) {
+    .tablet-landscape-only {
+      display: block;
+    }
+
+    body, input, textarea {
+      font-size: 14pt;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .desktop-up {
+      display: block;
+    }
+
+    body, input, textarea {
+      font-size: 15pt;
+    }
+  }
+
+  @media (min-width: 1200px) and (max-width: 1799px) {
+    .desktop-only {
+      display: block;
+    }
+
+    body, input, textarea {
+      font-size: 15pt;
+    }
+  }
+
+  @media (min-width: 1800px) {
+    .big-desktop-up {
+      display: block;
+    }
+
+    body, input, textarea {
+      font-size: 15pt;
+    }
+  }
+
+/* Form */
+
+	form label {
+		display: block;
+		font-weight: 400;
+		color: #363636;
+		margin: 0 0 1em 0;
+	}
+
+	form input[type="text"],
+	form input[type="email"],
+	form input[type="password"],
+	form textarea {
+		-webkit-appearance: none;
+		border: 0;
+		background: #f4f4f4;
+		padding: 0.75em;
+		width: 100%;
+	}
+
+		form input[type="text"]:focus,
+		form input[type="email"]:focus,
+		form input[type="password"]:focus,
+		form select:focus,
+		form textarea:focus {
+			background: #f8f8f8;
+		}
+
+	form input[type="text"],
+	form input[type="email"],
+	form input[type="password"],
+	form select {
+		line-height: 1.35em;
+	}
+
+	form ::-webkit-input-placeholder {
+		color: #999;
+	}
+
+	form :-moz-placeholder {
+		color: #999;
+	}
+
+	form ::-moz-placeholder {
+		color: #999;
+	}
+
+	form :-ms-input-placeholder {
+		color: #999;
+	}
+
+/* Button */
+
+	input[type="button"],
+	input[type="submit"],
+	button,
+	.button {
+		-webkit-appearance: none;
+		display: inline-block;
+		background-color: #222222;
+		color: #ffffff;
+		border: 0;
+		cursor: pointer;
+		outline: 0;
+		padding: 0.7em 1.5em 0.7em 1.5em;
+	}
+
+		input[type="button"]:hover,
+		input[type="submit"]:hover,
+		button:hover,
+		.button:hover {
+			background-color: #333333;
+		}
+
+		input[type="button"]:active,
+		input[type="submit"]:active,
+		button:active,
+		.button:active {
+			background-color: #444444;
+		}
+
+		@media screen and (max-width: 899px) {
+
+			input[type="button"],
+			input[type="submit"],
+			button,
+			.button {
+				width: 100%;
+			}
+		}
+
+  /* Página */
+
+  	#pagina {
+  		display: flex;
+  		flex-direction: column;
+  		justify-content: center;
+      background-color: purple;
+  	}
+*/

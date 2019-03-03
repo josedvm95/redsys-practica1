@@ -1,4 +1,5 @@
 /*José A. del Val*/
+
 * {
   box-sizing: border-box;
 }
@@ -18,7 +19,7 @@ article, footer, header, menu, nav, section {
 	display: block;}
 
 body {
-	line-height: 1;
+	line-height: 1; /*espaciado entre líneas*/
 }
 
 ul {
@@ -26,19 +27,7 @@ ul {
 }
 
 body {
-	-webkit-text-size-adjust: none;
-}
-
-input::-moz-focus-inner {
-	border: 0;
-	padding: 0;
-}
-
-input, textarea {
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	-ms-appearance: none;
-	appearance: none;
+	-webkit-text-size-adjust: none; /*No cambiar tamaño de texto en iPhone*/
 }
 
 /* Fila */
@@ -104,7 +93,7 @@ input, textarea {
 
 		.fila {
 			margin-top: -1.25em;
-			margin-left: -1.25em;
+			margin-left: 0;
 		}
 
 			.fila > * {
@@ -184,6 +173,7 @@ input, textarea {
 		}
 
 /* Estilos base */
+
 body {
   overflow-y: scroll;
 }
@@ -191,14 +181,14 @@ body {
 body, input, textarea {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
-  color: #777777;
+  color: #777777; /*gris*/
   font-size: 20pt;
   line-height: 1.75em;
 }
 
 strong, b, h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
-  color: #363636;
+  color: #363636; /*gris oscuro*/
 }
 
 h1 {
@@ -215,13 +205,14 @@ h3, h4, h5, h6 {
 
 hr {
   border: 0;
-  border-top: solid 1px #ddd;
+  border-top: solid 1px #ddd; /*gris claro*/
   padding: 1.5em 0 0 0;
   margin: 1.75em 0 0 0;
 }
 
-img {
-  max-width: 150px;
+.logo img {
+  max-width: 50px;
+  margin-left: 70%;
 }
 
 /*Adaptar a distintas pantallas*/
@@ -233,7 +224,7 @@ img {
   }
 
   .phone-up {
-    /*Do nothing, for now*/
+    /*De momento nada, reservado*/
   }
 
   @media (max-width: 599px) {
@@ -314,20 +305,12 @@ img {
 
 /* Form */
 
-	form label {
-		display: block;
-		font-weight: 400;
-		color: #363636;
-		margin: 0 0 1em 0;
-	}
-
 	form input[type="text"],
 	form input[type="email"],
 	form input[type="password"],
 	form textarea {
-		-webkit-appearance: none;
 		border: 0;
-		background: #f4f4f4;
+		background: #f4f4f4; /*gris claro*/
 		padding: 0.75em;
 		width: 100%;
 	}
@@ -335,32 +318,14 @@ img {
 		form input[type="text"]:focus,
 		form input[type="email"]:focus,
 		form input[type="password"]:focus,
-		form select:focus,
 		form textarea:focus {
-			background: #f8f8f8;
+			background: #f8f8f8; /*gris más claro*/
 		}
 
 	form input[type="text"],
 	form input[type="email"],
-	form input[type="password"],
-	form select {
+	form input[type="password"] {
 		line-height: 1.35em;
-	}
-
-	form ::-webkit-input-placeholder {
-		color: #999;
-	}
-
-	form :-moz-placeholder {
-		color: #999;
-	}
-
-	form ::-moz-placeholder {
-		color: #999;
-	}
-
-	form :-ms-input-placeholder {
-		color: #999;
 	}
 
 /* Button */
@@ -371,7 +336,7 @@ img {
 	.button {
 		-webkit-appearance: none;
 		display: inline-block;
-		background-color: #222222;
+		background-color: #222222; /*gris casi negro*/
 		color: #ffffff;
 		border: 0;
 		cursor: pointer;
@@ -383,14 +348,14 @@ img {
 		input[type="submit"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: #333333;
+			background-color: #333333; /*gris oscuro*/
 		}
 
 		input[type="button"]:active,
 		input[type="submit"]:active,
 		button:active,
 		.button:active {
-			background-color: #444444;
+			background-color: #444444; /*gris menos oscuro*/
 		}
 
 		@media screen and (max-width: 899px) {
@@ -403,11 +368,11 @@ img {
 			}
 		}
 
-  /* Página */
+/* Página */
 
-  	#pagina {
-  		display: flex;
-  		flex-direction: column;
-  		justify-content: center;
-      background-color: purple;
-  	}
+	#pagina {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+    background-color: purple;
+	}

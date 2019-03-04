@@ -13,13 +13,13 @@
 
 		<!-- Menú -->
 		<nav id="nav">
-			<ul class="menu fila">
-        <span class="logo col-2"><img src="imagenes/logo.png" alt="" /></span>
-				<li class="col-2 col-12-small"><a href="#caracteristicas">Características</a></li>
-				<li class="col-2 col-12-small"><a href="#precio">Precio</a></li>
-				<li class="col-2 col-12-small"><a href="#comunidad">Comunidad</a></li>
-				<li class="col-2 col-12-small"><a href="#recursos">Recursos</a></li>
-			</ul>
+			<div class="menu fila">
+        <span class="logo col-4"><img src="imagenes/logo.png" alt="" /></span>
+				<a onmouseover="cambiarColor('orange',this)" onmouseout="cambiarColor('#333333',this)" class="col-2 tablet-landscape-up" href="#caracteristicas">Características</a>
+				<a class="col-2 tablet-landscape-up" href="#precio">Precio</a>
+				<a class="col-2 tablet-landscape-up" href="#comunidad">Comunidad</a>
+				<a class="col-2 tablet-landscape-up" href="#recursos">Recursos</a>
+			</div>
 		</nav>
 
 		<!-- Principal -->
@@ -64,6 +64,27 @@
 					</form>
 				</div>
 			</div>
+
+      <!-- Precio -->
+      <hr / />
+      <div class="precio fila">
+        <div class="col-12">
+          <h2>Precio mínimo garantizado</h2> <br/>
+          abc  <br/>
+          abc  </br/>
+          abc  </br/>
+          abc  </br/>
+          abc  </br/>
+          abc  </br/>
+          abc  </br/>
+          abc  </br/>
+          abc  </br/>
+          abc  </br/>
+          abc  </br/>
+          abc  </br/>
+        </div>
+      </div>
+
 		</section>
 
 		<footer id="pie">
@@ -76,6 +97,15 @@
 
 	<!-- Scripts -->
   <script src="js/jquery.min.js"></script>
+
+  <script >
+
+    //alternativa a usar directamente el CSS con a:hover
+    function cambiarColor(color,el) {
+      el.style.backgroundColor = color;
+    }
+
+  </script>
 
 </body>
 </html>

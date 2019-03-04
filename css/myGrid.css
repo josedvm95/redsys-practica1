@@ -174,10 +174,6 @@ body {
 
 /* Estilos base */
 
-body {
-  overflow-y: scroll;
-}
-
 body, input, textarea {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
@@ -208,11 +204,6 @@ hr {
   border-top: solid 1px #ddd; /*gris claro*/
   padding: 1.5em 0 0 0;
   margin: 1.75em 0 0 0;
-}
-
-.logo img {
-  max-width: 50px;
-  margin-left: 70%;
 }
 
 /*Adaptar a distintas pantallas*/
@@ -370,9 +361,33 @@ hr {
 
 /* Página */
 
-	#pagina {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-    background-color: purple;
-	}
+#pagina {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+  background-color: purple;
+}
+
+.logo img {
+  max-width: 50px;
+  /* margin-left: 50%; */
+}
+
+.menu {
+  background-color: #333333; /*gris muy oscuro*/
+  margin: 0;
+  padding: 0;
+
+}
+
+.menu a {
+  color: darkgray;
+  padding-top: 3.3vh;
+  padding-bottom: 3.3vh;
+  /* padding-left: 4vw;
+  padding-right: 4vw; */
+}
+
+.menu a:hover {
+  background-color: orange;
+}
